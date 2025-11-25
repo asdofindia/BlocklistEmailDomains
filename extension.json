@@ -1,0 +1,30 @@
+{
+  "name": "BlocklistEmailDomains",
+  "author": ["Akshay S Dinesh"],
+  "url": "https://learnlearn.in/blocklistemaildomains",
+  "descriptionmsg": "blocklistemaildomains-desc",
+  "license-name": "GPL-2.0-or-later",
+  "type": "antispam",
+  "requires": {
+    "MediaWiki": ">= 1.31.0"
+  },
+  "AutoloadNamespaces": {
+    "LearnLearnIn\\Extension\\BlocklistEmailDomains\\": "src/"
+  },
+  "AuthManagerAutoConfig": {
+    "preauth": {
+      "BEDPreAuth": {
+        "class": "LearnLearnIn\\Extension\\BlocklistEmailDomains\\PreAuth"
+      }
+    }
+  },
+  "config": {
+    "BEDBadDomainsPath": {
+      "value": ""
+    }
+  },
+  "MessagesDirs": {
+    "BlocklistEmailDomains": ["i18n"]
+  },
+  "manifest_version": 2
+}

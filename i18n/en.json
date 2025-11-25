@@ -1,0 +1,6 @@
+{
+  "@metadata": {
+    "authors": ["Akshay S Dinesh"]
+  },
+  "blocklistemaildomains-desc": "Allows blocking/allowing domains from registration"
+}
