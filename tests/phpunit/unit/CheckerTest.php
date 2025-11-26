@@ -15,7 +15,7 @@ class CheckerTest extends TestCase {
 		$blocked = new Email( "test@example.com" );
 		$allowed = new Email( "test@example.org" );
 		$temp = tmpfile();
-		fwrite( $temp, "example.com" );
+		fwrite( $temp, "example.com\nexample.net" );
 		$path = stream_get_meta_data( $temp )['uri'];
 		$blocklist = new Blocklist( $path );
 		$this->assertTrue( Checker::isBlocked( $blocked, $blocklist ) );
